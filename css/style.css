@@ -1,0 +1,63 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+.header {
+  width: 100vw;
+  height: 35vh;
+  background-image: url(../images/pattern-bg.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0; }
+
+.app {
+  width: 85vw;
+  height: 50vh;
+  text-align: center;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 1rem;
+  justify-items: center; }
+  .app__name {
+    color: #fff; }
+  .app__input {
+    width: 40rem;
+    border-radius: .25rem;
+    overflow: hidden;
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 2/3; }
+    .app__input--ip {
+      flex: 1;
+      background-color: #fff;
+      padding: .5rem;
+      border: none;
+      outline: none; }
+      .app__input--ip::-webkit-input-placeholder {
+        font-family: inherit;
+        color: #969696; }
+    .app__input .btn {
+      padding: .5rem;
+      border: none;
+      outline: none;
+      background-color: #000; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }

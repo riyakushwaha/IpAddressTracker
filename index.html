@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  <header class="header">
+    <div class="app">
+      <div class="app__name">
+        IP Address Tracker
+      </div>
+
+      <div class="app__input">
+        <label for="ip-address"></label>
+        <input type="text" class="app__input--ip" id="ip-address" name="ip-address" placeholder="Search for any IP address or domain">
+        <button class="btn" type="submit">
+          <img src="images/icon-arrow.svg" alt="submit-button">
+        </button>
+      </div>
+
+      <div class="user__info">
+        <div class="user__info--1">
+          <div class="user__info--name">IP Address</div>
+          <div class="user__info--value">192.212.174.101</div>
+        </div>
+        <div class="user__info--2">
+          <div class="user__info--name">Location</div>
+          <div class="user__info--value">Brooklyn, NY 100001</div>
+        </div>
+        <div class="user__info--3">
+          <div class="user__info--name">Timezone</div>
+          <div class="user__info--value">UTC-05:00</div>
+        </div>
+        <div class="user__info--4">
+          <div class="user__info--name">ISP</div>
+          <div class="user__info--value">SpaceX Starlink</div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <div id="mapid"></div>
+  
+
+  
+  
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>
+
+<!--
+  
+    IP Address Tracker
+
+  Search for any IP address or domain
+
+  IP Address
+  Location
+  Timezone
+    UTC -- add offset value dynamically using the API 
+    ISP
+
+  <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->
