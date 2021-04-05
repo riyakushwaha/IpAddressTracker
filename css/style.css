@@ -21,12 +21,15 @@ body {
 
 .header {
   width: 100vw;
-  height: 45vh;
+  height: 35vh;
   background-image: url(../images/pattern-bg.png);
   background-position: center;
   background-size: cover;
   position: fixed;
   top: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      height: 48vh; } }
 
 .app {
   width: 60vw;
@@ -38,7 +41,8 @@ body {
   position: relative; }
   @media only screen and (max-width: 75em) {
     .app {
-      width: 85vw; } }
+      width: 75vw;
+      margin: 4rem auto; } }
   .app__name {
     color: #fff;
     font-weight: 500;
@@ -53,7 +57,9 @@ body {
     margin-bottom: 4.5rem; }
     @media only screen and (max-width: 37.5em) {
       .app__input {
-        width: 100%; } }
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem; } }
     .app__input--ip {
       flex: 1;
       background-color: #fff;
@@ -68,6 +74,9 @@ body {
         color: #969696;
         font-size: 1.5rem;
         line-height: 1; }
+        @media only screen and (max-width: 37.5em) {
+          .app__input--ip::-webkit-input-placeholder {
+            font-size: 1.25rem; } }
     .app__input .btn {
       padding: 1.5rem;
       border: none;
@@ -115,7 +124,7 @@ body {
     color: #2b2b2b; }
     @media only screen and (max-width: 37.5em) {
       .user__info--value {
-        font-size: 2.5rem; } }
+        font-size: 2rem; } }
 
 .attribution {
   font-size: 11px;
@@ -125,9 +134,37 @@ body {
   color: #3e52a3; }
 
 #map {
-  background-color: orange;
+  background-color: #fff;
   position: absolute;
   bottom: 0;
-  height: 55vh;
+  height: 65vh;
   width: 100vw;
   z-index: -1; }
+  @media only screen and (max-width: 37.5em) {
+    #map {
+      height: 52vh; } }
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  z-index: 500;
+  text-align: center;
+  opacity: 0; }
+  .modal .o {
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .modal .o:hover {
+      animation: rotate 2s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }

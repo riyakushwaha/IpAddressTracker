@@ -19,11 +19,15 @@
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
 
-  <script defer src="javascript/script.js"></script>
+  <!-- <script defer type="module" src="javascript/script.js"></script> -->
 
   <title>Frontend Mentor | IP Address Tracker</title>
 </head>
 <body>
+  <div class="modal">
+    <svg class="o"><use xlink:href = "images/icons.svg#icon-loader" fill="orange"></use></svg>
+  </div>
+  
   <header class="header">
     <div class="app">
       <div class="app__name">
@@ -41,19 +45,20 @@
       <div class="user__info">
         <div class="user__info-box user__info--1">
           <div class="user__info--name">IP Address</div>
-          <div class="user__info--value">192.212.174.101</div>
+          <div class="user-ip user__info--value">--</div>
         </div>
         <div class="user__info-box user__info--2">
           <div class="user__info--name">Location</div>
-          <div class="user__info--value">Brooklyn, NY 100001</div>
+          <div class="user-location user__info--value">--</div>
+          <!-- <svg class="o"><use xlink:href = "images/icons.svg#icon-loader" fill="orange"></use></svg> -->
         </div>
         <div class="user__info-box user__info--3">
           <div class="user__info--name">Timezone</div>
-          <div class="user__info--value">UTC-05:00</div>
+          <div class="user-timezone user__info--value">--</div>
         </div>
         <div class="user__info-box user__info--4">
-          <div class="user__info--name">ISP</div>
-          <div class="user__info--value">SpaceX Starlink</div>
+          <div class="user-service-name user__info--name">ISP</div>
+          <div class="user-service-value user__info--value">--</div>
         </div>
       </div>
 
@@ -69,4 +74,8 @@
   <div class="attribution">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   Coded by <a href="#">Your Name Here</a>.
+
+  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// }).addTo(map);
 </div> -->
