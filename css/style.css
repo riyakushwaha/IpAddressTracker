@@ -1,7 +1,14 @@
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
-  font-size: 1.8rem;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 61%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 60%; } }
+
+body {
   font-family: 'Rubik', sans-serif;
   font-weight: 400; }
 
@@ -14,46 +21,101 @@ html {
 
 .header {
   width: 100vw;
-  height: 35vh;
+  height: 45vh;
   background-image: url(../images/pattern-bg.png);
   background-position: center;
   background-size: cover;
-  position: absolute;
+  position: fixed;
   top: 0; }
 
 .app {
-  width: 85vw;
-  height: 50vh;
+  width: 60vw;
   text-align: center;
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-row-gap: 1rem;
-  justify-items: center; }
+  margin: 6rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; }
+  @media only screen and (max-width: 75em) {
+    .app {
+      width: 85vw; } }
   .app__name {
-    color: #fff; }
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: .5px;
+    font-size: 2.5rem; }
   .app__input {
-    width: 40rem;
-    border-radius: .25rem;
+    width: 43%;
+    border-radius: 13px;
     overflow: hidden;
     display: flex;
-    grid-column: 2/3;
-    grid-row: 2/3; }
+    margin-top: 3rem;
+    margin-bottom: 4.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .app__input {
+        width: 100%; } }
     .app__input--ip {
       flex: 1;
       background-color: #fff;
-      padding: .5rem;
+      padding: 1.75rem;
       border: none;
-      outline: none; }
+      outline: none;
+      font-family: inherit;
+      font-size: 1.5rem;
+      cursor: pointer; }
       .app__input--ip::-webkit-input-placeholder {
-        font-family: inherit;
-        color: #969696; }
+        font-family: 'Rubik', sans-serif;
+        color: #969696;
+        font-size: 1.5rem;
+        line-height: 1; }
     .app__input .btn {
-      padding: .5rem;
+      padding: 1.5rem;
       border: none;
       outline: none;
       background-color: #000; }
+      .app__input .btn:hover {
+        cursor: pointer;
+        background-color: #2b2b2b; }
+
+.user__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 3rem 0;
+  font-weight: 700; }
+  @media only screen and (max-width: 37.5em) {
+    .user__info {
+      flex-direction: column;
+      padding: 2rem 0; } }
+  .user__info-box:not(:first-child) {
+    border-left: 2px solid #969696; }
+    @media only screen and (max-width: 37.5em) {
+      .user__info-box:not(:first-child) {
+        border-left: none;
+        margin-top: 2rem; } }
+  .user__info-box {
+    text-align: left;
+    overflow-wrap: normal;
+    padding: 0 3rem;
+    flex: 1; }
+    @media only screen and (max-width: 37.5em) {
+      .user__info-box {
+        text-align: center;
+        padding: 0 2rem; } }
+  .user__info--name {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #969696;
+    margin-bottom: 1rem; }
+  .user__info--value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2b2b2b; }
+    @media only screen and (max-width: 37.5em) {
+      .user__info--value {
+        font-size: 2.5rem; } }
 
 .attribution {
   font-size: 11px;
@@ -61,3 +123,11 @@ html {
 
 .attribution a {
   color: #3e52a3; }
+
+#map {
+  background-color: orange;
+  position: absolute;
+  bottom: 0;
+  height: 55vh;
+  width: 100vw;
+  z-index: -1; }
