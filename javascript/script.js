@@ -8,6 +8,8 @@ const userLocation = document.querySelector(".user-location");
 const userTimezone = document.querySelector(".user-timezone");
 const userServiceName = document.querySelector(".user-service-name");
 const userServiceValue = document.querySelector(".user-service-value");
+const modal = document.querySelector(".modal");
+const svg = document.querySelector(".o");
 
 class IPAddressTracker{
     #map;
@@ -16,7 +18,6 @@ class IPAddressTracker{
 
     constructor(){
         this.getPosition();
-        this.getPositionOfInputIP();
         buttonSubmit.addEventListener("click", this.getPositionOfInputIP.bind(this));
     }
 
@@ -46,17 +47,23 @@ class IPAddressTracker{
             iconSize: [20, 27],
         });
 
-        this.renderMarkup(coords);
+        this.getPositionOfInputIP();
+        // this.renderMarkup(coords);
     }
 
     getPositionOfInputIP(){
         console.log("getPositionOfInputIP called");
         const ip = inputIP.value;
         inputIP.value = "";
+        modal.style.display = "block";
+        svg.style.animationPlayState = "running";
         const request = fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${ip}`);
 
         request.then(reponse => reponse.json()).then(
             function(data){
+                modal.style.display = "none";
+                svg.style.animationPlayState = "paused";
+
                 userIP.innerHTML = data.ip;
                 userLocation.innerHTML = `${data.location.city}, ${data.location.country}`;
                 userTimezone.innerHTML = data.location.timezone;

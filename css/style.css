@@ -151,17 +151,16 @@ body {
   position: absolute;
   top: 0;
   z-index: 500;
-  text-align: center;
-  opacity: 0; }
+  text-align: center; }
   .modal .o {
-    width: 100px;
+    width: 5%;
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .modal .o:hover {
-      animation: rotate 2s infinite linear; }
+    top: 35%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    animation: rotate 2s infinite linear;
+    animation-play-state: paused; }
 
 @keyframes rotate {
   0% {
