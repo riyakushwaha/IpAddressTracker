@@ -6,11 +6,9 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -25,14 +23,10 @@ Users should be able to:
 - ✅ Search for any IP addresses or domains and see the key information and location
 - 🎉 Added spinner on the screen.
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://your-solution-url.com)
+- [Live Site URL](https://your-live-site-url.com)
 
 ## My process
 
@@ -45,12 +39,6 @@ Users should be able to:
 - Desktop-first workflow
 - [Leaflet](https://leafletjs.com/) - JS library
 - [IPify](https://geo.ipify.org/docs) - IP Geolocation API
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
 
 ## Author
 
